@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praveen Padi | Data Analyst Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6366f1', // Indigo-500
+            secondary: '#8b5cf6', // Violet-500
+            accent: '#ec4899', // Pink-500
+          },
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-20px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Google Fonts: Outfit -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="gradient-bg min-h-screen text-slate-800 dark:text-slate-100 transition-colors duration-300">
+
+  <!-- Navigation -->
+  <nav class="fixed w-full z-50 transition-all duration-300 glass-card border-b-0">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="#home"
+          class="text-2xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+          PP.
+        </a>
+
+        <div class="hidden md:flex space-x-8 text-sm font-semibold">
+          <a href="#about" class="hover:text-primary transition-colors">About</a>
+          <a href="#experience" class="hover:text-primary transition-colors">Experience</a>
+          <a href="#skills" class="hover:text-primary transition-colors">Skills</a>
+          <a href="#education" class="hover:text-primary transition-colors">Education</a>
+          <a href="#contact"
+            class="px-4 py-2 rounded-full bg-primary text-white hover:bg-secondary transition-colors shadow-lg shadow-primary/30">Let's
+            Talk</a>
+        </div>
+
+        <div class="flex items-center space-x-4">
+          <button id="theme-toggle"
+            class="p-2 rounded-full glass-card hover:bg-white/50 dark:hover:bg-slate-700/50 transition-colors">
+            <svg id="sun-icon" class="w-5 h-5 hidden dark:block text-yellow-400" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+              </path>
+            </svg>
+            <svg id="moon-icon" class="w-5 h-5 block dark:hidden text-slate-600" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M20.354 24.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+          </button>
+          <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md glass-card">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden glass-card border-t border-slate-200/20">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="#about" class="block px-3 py-2 rounded-md font-medium hover:bg-white/20">About</a>
+        <a href="#experience" class="block px-3 py-2 rounded-md font-medium hover:bg-white/20">Experience</a>
+        <a href="#skills" class="block px-3 py-2 rounded-md font-medium hover:bg-white/20">Skills</a>
+        <a href="#education" class="block px-3 py-2 rounded-md font-medium hover:bg-white/20">Education</a>
+        <a href="#contact" class="block px-3 py-2 rounded-md font-medium hover:bg-white/20 text-primary">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
+    <!-- Floating shapes background decoration -->
+    <div
+      class="absolute top-20 left-10 w-32 h-32 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float">
+    </div>
+    <div
+      class="absolute bottom-20 right-10 w-32 h-32 bg-yellow-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float"
+      style="animation-delay: 2s;"></div>
+    <div
+      class="absolute top-40 right-20 w-32 h-32 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float"
+      style="animation-delay: 4s;"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+      <div class="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
+        <div
+          class="inline-block p-1 px-4 rounded-full glass-card border border-primary/20 text-primary dark:text-white font-bold tracking-wide shadow-lg backdrop-blur-md">
+          🚀 Available for Analyst Roles
+        </div>
+        <h1
+          class="text-6xl md:text-8xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4 drop-shadow-sm">
+          Hello, I'm <br>
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent">Praveen
+            Padi</span>
+        </h1>
+        <p class="text-2xl md:text-3xl text-slate-700 dark:text-slate-200 font-light mb-8">
+          Data Analyst | Python • SQL • Power BI
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-6">
+          <a href="#contact"
+            class="px-8 py-4 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold hover:scale-105 transition-transform shadow-xl">
+            Connect on LinkedIn
+          </a>
+          <a href="resume.pdf" download="Praveen_Padi_Resume.pdf"
+            class="px-8 py-4 rounded-full glass-card text-slate-900 dark:text-white font-bold hover:scale-105 transition-transform shadow-xl border border-white/20">
+            Download Resume
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 section-fade">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <div class="glass-card p-10 rounded-3xl shadow-2xl">
+          <h2
+            class="text-4xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+            About Me</h2>
+          <p class="text-xl leading-relaxed text-slate-700 dark:text-slate-200 mb-6 font-medium">
+            Data Analyst with ~2.5 years of experience specializing in data analysis, visualization, reporting, and
+            process optimization. My expertise lies in Python, SQL, Excel, and Power BI, with a proven ability to turn
+            raw data into measurable business insights.
+          </p>
+          <p class="text-xl leading-relaxed text-slate-700 dark:text-slate-200">
+            I hold a B.Tech in Computer Science from <span class="text-primary font-bold">IIT Goa</span> and thrive in
+            fast-paced environments where data drives decision-making.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="py-24 section-fade">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold mb-16 text-center text-slate-900 dark:text-white">Professional Experience</h2>
+      <div class="max-w-4xl mx-auto space-y-8">
+
+        <!-- Role 1 -->
+        <div
+          class="glass-card p-8 rounded-2xl hover:scale-[1.02] transition-transform duration-300 border-l-4 border-l-primary">
+          <div class="flex flex-col md:flex-row justify-between md:items-center mb-4">
+            <div>
+              <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Data Analyst</h3>
+              <p class="text-lg text-primary font-semibold">Digital IT Hub</p>
+            </div>
+            <div class="text-right mt-2 md:mt-0">
+              <span class="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-bold">May 2024 –
+                Present</span>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Visakhapatnam, India</p>
+            </div>
+          </div>
+          <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-200 text-lg">
+            <li>Perform data analysis and reporting to support key business decisions.</li>
+            <li>Build interactive dashboards and actionable insights for operational improvement.</li>
+          </ul>
+        </div>
+
+        <!-- Role 2 -->
+        <div
+          class="glass-card p-8 rounded-2xl hover:scale-[1.02] transition-transform duration-300 border-l-4 border-l-accent">
+          <div class="flex flex-col md:flex-row justify-between md:items-center mb-4">
+            <div>
+              <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Associate</h3>
+              <p class="text-lg text-accent font-semibold">ShowTime Consulting</p>
+            </div>
+            <div class="text-right mt-2 md:mt-0">
+              <span class="inline-block px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-bold">Feb 2024 –
+                May 2024</span>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Hyderabad, India</p>
+            </div>
+          </div>
+          <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-200 text-lg">
+            <li>Improved team productivity by <span class="font-bold text-accent">25%</span> through workflow analysis.
+            </li>
+            <li>Reduced project timelines by <span class="font-bold text-accent">30%</span> via strategic task
+              prioritization.</li>
+            <li>Increased client retention by <span class="font-bold text-accent">20%</span> using data-backed insights.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Role 3 -->
+        <div
+          class="glass-card p-8 rounded-2xl hover:scale-[1.02] transition-transform duration-300 border-l-4 border-l-secondary">
+          <div class="flex flex-col md:flex-row justify-between md:items-center mb-4">
+            <div>
+              <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Data Analyst</h3>
+              <p class="text-lg text-secondary font-semibold">Digital IT Hub</p>
+            </div>
+            <div class="text-right mt-2 md:mt-0">
+              <span class="inline-block px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm font-bold">Aug
+                2023 – Jan 2024</span>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Visakhapatnam, India</p>
+            </div>
+          </div>
+          <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-200 text-lg">
+            <li>Supported data analysis, reporting, and business intelligence initiatives.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-24 section-fade">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold mb-16 text-center text-slate-900 dark:text-white">Technical Arsenal</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+
+        <!-- Skill Card 1 -->
+        <div class="glass-card p-10 rounded-3xl hover:-translate-y-2 transition-transform duration-300 group">
+          <div
+            class="h-16 w-16 mx-auto bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+              </path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-6">Data & Analytics</h3>
+          <div class="flex flex-wrap justify-center gap-3">
+            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-full text-sm font-medium">Data
+              Analysis</span>
+            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-full text-sm font-medium">Business
+              Intelligence</span>
+            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-full text-sm font-medium">Statistics</span>
+            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-full text-sm font-medium">Automation</span>
+          </div>
+        </div>
+
+        <!-- Skill Card 2 -->
+        <div class="glass-card p-10 rounded-3xl hover:-translate-y-2 transition-transform duration-300 group">
+          <div
+            class="h-16 w-16 mx-auto bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-6">Tools & Tech</h3>
+          <div class="flex flex-wrap justify-center gap-3">
+            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-full text-sm font-medium">Python</span>
+            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-full text-sm font-medium">SQL</span>
+            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-full text-sm font-medium">Power BI</span>
+            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-full text-sm font-medium">Excel</span>
+          </div>
+        </div>
+
+        <!-- Skill Card 3 -->
+        <div class="glass-card p-10 rounded-3xl hover:-translate-y-2 transition-transform duration-300 group">
+          <div
+            class="h-16 w-16 mx-auto bg-pink-100 text-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-6">Visualization</h3>
+          <div class="flex flex-wrap justify-center gap-3">
+            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-full text-sm font-medium">Dashboards</span>
+            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-full text-sm font-medium">Reports</span>
+            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-full text-sm font-medium">Business
+              Insights</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="py-24 section-fade">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+        <!-- Education -->
+        <div class="glass-card p-8 rounded-3xl">
+          <h2 class="text-3xl font-bold mb-8 text-primary">Education</h2>
+          <div class="space-y-8">
+            <div class="pb-6 border-b border-gray-200/30 last:border-0">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100">B.Tech – Computer Science & Engineering
+              </h3>
+              <p class="text-lg text-slate-600 dark:text-slate-300">Indian Institute of Technology (IIT) Goa</p>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">2019 – 2023</p>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100">Intermediate & High School</h3>
+              <p class="text-lg text-slate-600 dark:text-slate-300">Narayana Institute / Dr. KKR Gowtham</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certs -->
+        <div class="glass-card p-8 rounded-3xl">
+          <h2 class="text-3xl font-bold mb-8 text-accent">Certifications & Lang</h2>
+          <ul class="space-y-6">
+            <li class="flex items-center space-x-4">
+              <span
+                class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-green-100 text-green-600">✓</span>
+              <span class="text-lg text-slate-700 dark:text-slate-200">Full Stack Web Developer</span>
+            </li>
+            <li class="flex items-center space-x-4">
+              <span
+                class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-green-100 text-green-600">✓</span>
+              <span class="text-lg text-slate-700 dark:text-slate-200">EF SET English Certificate – C2 Proficient
+                (94/100)</span>
+            </li>
+          </ul>
+          <div class="mt-8 pt-8 border-t border-gray-200/30">
+            <div class="flex justify-between items-center mb-2">
+              <span class="font-bold">English & Hindi</span>
+              <span class="text-sm bg-slate-200 dark:bg-slate-700 px-2 py-1 rounded">Professional</span>
+            </div>
+            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+              <div class="bg-gradient-to-r from-primary to-accent h-2.5 rounded-full" style="width: 100%"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center section-fade">
+      <h2 class="text-4xl font-bold mb-6 text-slate-900 dark:text-white">Let's Connect</h2>
+      <p class="text-xl text-slate-600 dark:text-slate-300 mb-12">
+        Open to opportunities in Data Analysis and Business Intelligence.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a href="mailto:praveen.padi.19031@iitgoa.ac.in"
+          class="glass-card p-8 rounded-2xl hover:scale-105 transition-transform group">
+          <div
+            class="p-4 bg-primary/10 rounded-full text-primary w-16 h-16 mx-auto mb-4 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+              </path>
+            </svg>
+          </div>
+          <h3 class="font-bold text-xl mb-2">Email Me</h3>
+          <p class="text-sm text-slate-500 dark:text-slate-400 break-all">praveen.padi.19031@iitgoa.ac.in</p>
+        </a>
+
+        <a href="https://www.linkedin.com/in/praveen-padi-11b1031a0" target="_blank"
+          class="glass-card p-8 rounded-2xl hover:scale-105 transition-transform group">
+          <div
+            class="p-4 bg-blue-100 dark:bg-blue-900/30 rounded-full text-blue-600 w-16 h-16 mx-auto mb-4 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors">
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-xl mb-2">LinkedIn</h3>
+          <p class="text-sm text-slate-500 dark:text-slate-400">Connect Profile</p>
+        </a>
+      </div>
+
+      <div class="mt-12 text-slate-500 dark:text-slate-400">
+        <p>📍 Andhra Pradesh, India</p>
+        <p>📞 +91 7013228714</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 glass-card border-t border-white/10 text-center text-slate-500 dark:text-slate-400 text-sm mt-12">
+    <p>&copy; 2024 Praveen Padi. Designed with Glassmorphism.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
