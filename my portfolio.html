@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praveen Padi | Data Analyst Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Praveen Padi, a Data Analyst specializing in Python, SQL, Power BI, and Excel.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#2563eb', // blue-600
+                        secondary: '#475569', // slate-600
+                        dark: '#0f172a', // slate-900
+                        light: '#f8fafc', // slate-50
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Utilities */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            will-change: opacity, visibility;
+        }
+
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-slate-800 font-sans antialiased leading-relaxed">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#home" class="text-xl font-bold text-slate-900 tracking-tight">Praveen Padi<span
+                            class="text-primary">.</span></a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-slate-600 hover:text-primary transition-colors font-medium">About</a>
+                    <a href="#experience"
+                        class="text-slate-600 hover:text-primary transition-colors font-medium">Experience</a>
+                    <a href="#skills" class="text-slate-600 hover:text-primary transition-colors font-medium">Skills</a>
+                    <a href="#projects"
+                        class="text-slate-600 hover:text-primary transition-colors font-medium">Projects</a>
+                    <a href="#contact"
+                        class="px-4 py-2 rounded-full bg-primary text-white hover:bg-blue-700 transition-colors font-medium text-sm">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 pt-2 pb-6 space-y-1 shadow-lg">
+                <a href="#about"
+                    class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-primary hover:bg-gray-50 rounded-md">About</a>
+                <a href="#experience"
+                    class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-primary hover:bg-gray-50 rounded-md">Experience</a>
+                <a href="#skills"
+                    class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-primary hover:bg-gray-50 rounded-md">Skills</a>
+                <a href="#projects"
+                    class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-primary hover:bg-gray-50 rounded-md">Projects</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-primary font-semibold">Contact
+                    Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-30">
+            <div
+                class="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl animate-blob">
+            </div>
+            <div
+                class="absolute top-20 right-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000">
+            </div>
+            <div
+                class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000">
+            </div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 fade-in-section">
+            <h2 class="text-primary font-semibold tracking-wide uppercase text-sm mb-3">Data Analyst | BI Analyst</h2>
+            <h1 class="text-5xl md:text-7xl font-bold text-slate-900 mb-6 tracking-tight">
+                Praveen Padi
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-600 mb-8 max-w-2xl mx-auto font-light">
+                Turning raw data into actionable business insights and efficiency improvements.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-10">
+                <a href="https://www.linkedin.com/in/praveen-padi-11b1031a0" target="_blank"
+                    class="flex items-center gap-2 px-6 py-3 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-all shadow-md hover:shadow-lg group">
+                    <i class="fab fa-linkedin text-lg"></i>
+                    <span>Connect on LinkedIn</span>
+                    <i
+                        class="fas fa-arrow-right text-xs opacity-0 group-hover:opacity-100 transform translate-x-[-5px] group-hover:translate-x-0 transition-all"></i>
+                </a>
+                <a href="#"
+                    class="flex items-center gap-2 px-6 py-3 bg-white text-slate-900 border border-slate-200 rounded-lg hover:border-slate-300 hover:bg-gray-50 transition-all shadow-sm">
+                    <i class="fas fa-download text-lg text-slate-500"></i>
+                    <span>Download Resume</span>
+                </a>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-6 text-slate-500 text-sm md:text-base">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-map-marker-alt text-primary"></i>
+                    <span>Andhra Pradesh, India</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-envelope text-primary"></i>
+                    <a href="mailto:praveen.padi.19031@iitgoa.ac.in"
+                        class="hover:text-primary transition-colors">praveen.padi.19031@iitgoa.ac.in</a>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-phone text-primary"></i>
+                    <span>+91 7013228714</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in-section">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">About Me</h2>
+                <div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="bg-gray-50 rounded-2xl p-8 md:p-10 shadow-sm border border-gray-100 fade-in-section">
+                <p class="text-lg text-slate-700 leading-relaxed mb-6">
+                    Data Analyst with <span class="font-semibold text-slate-900">~2.5 years of experience</span> and a
+                    strong background in data analysis, visualization, reporting, and process optimization.
+                </p>
+                <p class="text-lg text-slate-700 leading-relaxed mb-6">
+                    I offer expertise in <span class="font-semibold text-primary">Python, SQL, Excel, and Power
+                        BI</span>, with a proven ability to turn raw data into strategic business insights. My academic
+                    foundation includes a B.Tech in Computer Science from <span class="font-semibold text-slate-900">IIT
+                        Goa</span>.
+                </p>
+                <div class="flex flex-wrap gap-3 mt-4">
+                    <span class="px-3 py-1 bg-blue-100 text-primary text-sm font-medium rounded-full">Data
+                        Analysis</span>
+                    <span class="px-3 py-1 bg-blue-100 text-primary text-sm font-medium rounded-full">Business
+                        Intelligence</span>
+                    <span class="px-3 py-1 bg-blue-100 text-primary text-sm font-medium rounded-full">Reporting</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Professional Experience</h2>
+                <div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
+            </div>
+
+            <div
+                class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+
+                <!-- Job 1 -->
+                <div
+                    class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active fade-in-section">
+                    <!-- Icon -->
+                    <div
+                        class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 text-primary z-10">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <!-- Content -->
+                    <div
+                        class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
+                            <h3 class="text-xl font-bold text-slate-900">Data Analyst</h3>
+                            <span
+                                class="text-xs font-semibold px-2 py-1 bg-green-100 text-green-700 rounded mt-1 sm:mt-0 w-fit">Current</span>
+                        </div>
+                        <div class="text-primary font-medium mb-1">Digital IT Hub</div>
+                        <div class="text-slate-500 text-sm mb-4 flex items-center gap-2">
+                            <i class="far fa-calendar-alt"></i> May 2024 – Present
+                            <span class="mx-1">•</span>
+                            <i class="fas fa-map-marker-alt"></i> Visakhapatnam, India
+                        </div>
+                        <ul class="space-y-2 text-slate-600 text-sm list-disc list-outside pl-4">
+                            <li>Perform data analysis and reporting to support key business decisions.</li>
+                            <li>Build interactive dashboards and generate insights for operational improvement.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div
+                    class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group fade-in-section">
+                    <div
+                        class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 text-slate-400 z-10">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div
+                        class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
+                            <h3 class="text-xl font-bold text-slate-900">Associate</h3>
+                        </div>
+                        <div class="text-primary font-medium mb-1">ShowTime Consulting</div>
+                        <div class="text-slate-500 text-sm mb-4 flex items-center gap-2">
+                            <i class="far fa-calendar-alt"></i> Feb 2024 – May 2024
+                            <span class="mx-1">•</span>
+                            <i class="fas fa-map-marker-alt"></i> Hyderabad, India
+                        </div>
+                        <ul class="space-y-2 text-slate-600 text-sm list-disc list-outside pl-4">
+                            <li><span class="font-semibold text-slate-800">Improved team productivity by 25%</span>
+                                through comprehensive workflow analysis.</li>
+                            <li><span class="font-semibold text-slate-800">Reduced project timelines by 30%</span> via
+                                strategic task prioritization.</li>
+                            <li><span class="font-semibold text-slate-800">Increased client retention by 20%</span>
+                                using data-backed insights.</li>
+                            <li>Collaborated with cross-functional teams and stakeholders to drive objectives.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job 3 -->
+                <div
+                    class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group fade-in-section">
+                    <div
+                        class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 text-slate-400 z-10">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div
+                        class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
+                            <h3 class="text-xl font-bold text-slate-900">Data Analyst</h3>
+                        </div>
+                        <div class="text-primary font-medium mb-1">Digital IT Hub</div>
+                        <div class="text-slate-500 text-sm mb-4 flex items-center gap-2">
+                            <i class="far fa-calendar-alt"></i> Aug 2023 – Jan 2024
+                            <span class="mx-1">•</span>
+                            <i class="fas fa-map-marker-alt"></i> Visakhapatnam, India
+                        </div>
+                        <ul class="space-y-2 text-slate-600 text-sm list-disc list-outside pl-4">
+                            <li>Supported data analysis, reporting, and business intelligence initiatives to drive
+                                growth.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Core Competencies</h2>
+                <div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Data & Analytics -->
+                <div
+                    class="p-6 bg-slate-50 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100 group fade-in-section">
+                    <div
+                        class="w-12 h-12 bg-blue-100 text-primary rounded-lg flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">Data & Analytics</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1 bg-white border border-slate-200 rounded-full text-sm text-slate-600">Data
+                            Analysis</span>
+                        <span
+                            class="px-3 py-1 bg-white border border-slate-200 rounded-full text-sm text-slate-600">Business
+                            Intelligence</span>
+                        <span
+                            class="px-3 py-1 bg-white border border-slate-200 rounded-full text-sm text-slate-600">Statistics</span>
+                        <span
+                            class="px-3 py-1 bg-white border border-slate-200 rounded-full text-sm text-slate-600">Reporting</span>
+                        <span
+                            class="px-3 py-1 bg-white border border-slate-200 rounded-full text-sm text-slate-600">Automation</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Technologies -->
+                <div
+                    class="p-6 bg-slate-50 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100 group fade-in-section">
+                    <div
+                        class="w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">Tools & Technologies</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1 bg-white border border-slate-200 rounded-full text-sm text-slate-600 font-medium">Python</span>
+                        <span
+                            class="px-3 py-1 bg-white border border-slate-200 rounded-full text-sm text-slate-600 font-medium">SQL</span>
+                        <span
+                            class="px-3 py-1 bg-white border border-slate-200 rounded-full text-sm text-slate-600 font-medium">Power
+                            BI</span>
+                        <span
+                            class="px-3 py-1 bg-white border border-slate-200 rounded-full text-sm text-slate-600 font-medium">Excel</span>
+                    </div>
+                </div>
+
+                <!-- Visualization -->
+                <div
+                    class="p-6 bg-slate-50 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100 group fade-in-section">
+                    <div
+                        class="w-12 h-12 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">Visualization</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1 bg-white border border-slate-200 rounded-full text-sm text-slate-600">Interactive
+                            Dashboards</span>
+                        <span
+                            class="px-3 py-1 bg-white border border-slate-200 rounded-full text-sm text-slate-600">Business
+                            Reports</span>
+                        <span
+                            class="px-3 py-1 bg-white border border-slate-200 rounded-full text-sm text-slate-600">Insight
+                            Generation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+                <!-- Education -->
+                <div class="fade-in-section">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
+                        <i class="fas fa-graduation-cap text-primary"></i> Education
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                            <h3 class="font-bold text-lg text-slate-900">B.Tech – Computer Science & Engineering</h3>
+                            <p class="text-primary font-medium">Indian Institute of Technology (IIT) Goa</p>
+                            <p class="text-slate-500 text-sm mt-1">2019 – 2023</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                            <h3 class="font-bold text-lg text-slate-900">Intermediate (MPC)</h3>
+                            <p class="text-slate-600">Narayana Institute</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                            <h3 class="font-bold text-lg text-slate-900">High School</h3>
+                            <p class="text-slate-600">Dr. KKR Gowtham International School</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications & Languages -->
+                <div class="space-y-12 fade-in-section">
+                    <!-- Certifications -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
+                            <i class="fas fa-certificate text-primary"></i> Certifications
+                        </h2>
+                        <div class="space-y-4">
+                            <div
+                                class="flex items-start gap-4 p-4 bg-white rounded-lg border border-gray-100 shadow-sm">
+                                <div class="mt-1 text-green-500"><i class="fas fa-check-circle"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Full Stack Web Developer</h4>
+                                    <p class="text-sm text-slate-500">Professional Certification</p>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-start gap-4 p-4 bg-white rounded-lg border border-gray-100 shadow-sm">
+                                <div class="mt-1 text-green-500"><i class="fas fa-check-circle"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">EF SET English Certificate</h4>
+                                    <p class="text-sm text-slate-500">C2 Proficient (94/100)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Languages -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                            <i class="fas fa-language text-primary"></i> Languages
+                        </h2>
+                        <div class="flex gap-4">
+                            <span
+                                class="px-4 py-2 bg-white border border-gray-200 rounded-lg text-slate-700 font-medium shadow-sm">English
+                                (Professional)</span>
+                            <span
+                                class="px-4 py-2 bg-white border border-gray-200 rounded-lg text-slate-700 font-medium shadow-sm">Hindi
+                                (Professional)</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="bg-slate-900 text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+            <h2 class="text-3xl font-bold mb-8">Ready to analyze performance?</h2>
+            <p class="text-slate-400 mb-10 max-w-xl mx-auto">
+                I am currently open to roles as a Data Analyst, Business Analyst, or BI Analyst. Let's discuss how I can
+                help your team optimize processes with data.
+            </p>
+
+            <div class="flex flex-col md:flex-row justify-center gap-6 mb-16">
+                <a href="mailto:praveen.padi.19031@iitgoa.ac.in"
+                    class="flex items-center justify-center gap-3 px-8 py-4 bg-primary rounded-xl text-lg font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-primary/50">
+                    <i class="far fa-envelope"></i> Send an Email
+                </a>
+                <a href="https://www.linkedin.com/in/praveen-padi-11b1031a0" target="_blank"
+                    class="flex items-center justify-center gap-3 px-8 py-4 bg-slate-800 border border-slate-700 rounded-xl text-lg font-bold hover:bg-slate-700 transition-all">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 text-slate-500 text-sm">
+                <p>&copy; 2026 Praveen Padi. All rights reserved.</p>
+                <p class="mt-2">Built with <i class="fas fa-heart text-red-500 mx-1"></i> using HTML, Tailwind CSS & JS.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <style>
+        @keyframes blob {
+            0% {
+                transform: translate(0px, 0px) scale(1);
+            }
+
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+
+            100% {
+                transform: translate(0px, 0px) scale(1);
+            }
+        }
+
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+    </style>
+</body>
+
+</html>
