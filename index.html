@@ -1,407 +1,430 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Praveen Padi | Data Analyst Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            primary: '#6366f1', // Indigo-500
-            secondary: '#8b5cf6', // Violet-500
-            accent: '#ec4899', // Pink-500
-          },
-          fontFamily: {
-            sans: ['Outfit', 'sans-serif'],
-          },
-          animation: {
-            'float': 'float 6s ease-in-out infinite',
-          },
-          keyframes: {
-            float: {
-              '0%, 100%': { transform: 'translateY(0)' },
-              '50%': { transform: 'translateY(-20px)' },
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padi Praveen | Data Analyst</title>
+    <meta name="description" content="Turning data into actionable business insights.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: "#0B0F17",
+                        card: "#111827",
+                        primary: "#3B82F6",
+                        accent: "#22C55E",
+                        "text-primary": "#E5E7EB",
+                        "text-secondary": "#9CA3AF"
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
             }
-          }
         }
-      }
-    }
-  </script>
-  <!-- Google Fonts: Outfit -->
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+<body class="bg-background text-text-primary antialiased selection:bg-primary/30 selection:text-white relative">
 
-<body class="gradient-bg min-h-screen text-slate-800 dark:text-slate-100 transition-colors duration-300">
-
-  <!-- Navigation -->
-  <nav class="fixed w-full z-50 transition-all duration-300 glass-card border-b-0">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        <a href="#home"
-          class="text-2xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
-          PP.
-        </a>
-
-        <div class="hidden md:flex space-x-8 text-sm font-semibold">
-          <a href="#about" class="hover:text-primary transition-colors">About</a>
-          <a href="#experience" class="hover:text-primary transition-colors">Experience</a>
-          <a href="#skills" class="hover:text-primary transition-colors">Skills</a>
-          <a href="#education" class="hover:text-primary transition-colors">Education</a>
-          <a href="#contact"
-            class="px-4 py-2 rounded-full bg-primary text-white hover:bg-secondary transition-colors shadow-lg shadow-primary/30">Let's
-            Talk</a>
-        </div>
-
-        <div class="flex items-center space-x-4">
-          <button id="theme-toggle"
-            class="p-2 rounded-full glass-card hover:bg-white/50 dark:hover:bg-slate-700/50 transition-colors">
-            <svg id="sun-icon" class="w-5 h-5 hidden dark:block text-yellow-400" fill="none" stroke="currentColor"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
-              </path>
-            </svg>
-            <svg id="moon-icon" class="w-5 h-5 block dark:hidden text-slate-600" fill="none" stroke="currentColor"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M20.354 24.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-            </svg>
-          </button>
-          <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md glass-card">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden glass-card border-t border-slate-200/20">
-      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        <a href="#about" class="block px-3 py-2 rounded-md font-medium hover:bg-white/20">About</a>
-        <a href="#experience" class="block px-3 py-2 rounded-md font-medium hover:bg-white/20">Experience</a>
-        <a href="#skills" class="block px-3 py-2 rounded-md font-medium hover:bg-white/20">Skills</a>
-        <a href="#education" class="block px-3 py-2 rounded-md font-medium hover:bg-white/20">Education</a>
-        <a href="#contact" class="block px-3 py-2 rounded-md font-medium hover:bg-white/20 text-primary">Contact</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section id="home" class="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
-    <!-- Floating shapes background decoration -->
-    <div
-      class="absolute top-20 left-10 w-32 h-32 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float">
-    </div>
-    <div
-      class="absolute bottom-20 right-10 w-32 h-32 bg-yellow-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float"
-      style="animation-delay: 2s;"></div>
-    <div
-      class="absolute top-40 right-20 w-32 h-32 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float"
-      style="animation-delay: 4s;"></div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-      <div class="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
-        <div
-          class="inline-block p-1 px-4 rounded-full glass-card border border-primary/20 text-primary dark:text-white font-bold tracking-wide shadow-lg backdrop-blur-md">
-          🚀 Available for Analyst Roles
-        </div>
-        <h1
-          class="text-6xl md:text-8xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4 drop-shadow-sm">
-          Hello, I'm <br>
-          <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent">Praveen
-            Padi</span>
-        </h1>
-        <p class="text-2xl md:text-3xl text-slate-700 dark:text-slate-200 font-light mb-8">
-          Data Analyst | Python • SQL • Power BI
-        </p>
-        <div class="flex flex-col sm:flex-row justify-center gap-6">
-          <a href="#contact"
-            class="px-8 py-4 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold hover:scale-105 transition-transform shadow-xl">
-            Connect on LinkedIn
-          </a>
-          <a href="resume.pdf" download="Praveen_Padi_Resume.pdf"
-            class="px-8 py-4 rounded-full glass-card text-slate-900 dark:text-white font-bold hover:scale-105 transition-transform shadow-xl border border-white/20">
-            Download Resume
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="py-24 section-fade">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-4xl mx-auto">
-        <div class="glass-card p-10 rounded-3xl shadow-2xl">
-          <h2
-            class="text-4xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
-            About Me</h2>
-          <p class="text-xl leading-relaxed text-slate-700 dark:text-slate-200 mb-6 font-medium">
-            Data Analyst with ~2.5 years of experience specializing in data analysis, visualization, reporting, and
-            process optimization. My expertise lies in Python, SQL, Excel, and Power BI, with a proven ability to turn
-            raw data into measurable business insights.
-          </p>
-          <p class="text-xl leading-relaxed text-slate-700 dark:text-slate-200">
-            I hold a B.Tech in Computer Science from <span class="text-primary font-bold">IIT Goa</span> and thrive in
-            fast-paced environments where data drives decision-making.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience" class="py-24 section-fade">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-4xl font-bold mb-16 text-center text-slate-900 dark:text-white">Professional Experience</h2>
-      <div class="max-w-4xl mx-auto space-y-8">
-
-        <!-- Role 1 -->
-        <div
-          class="glass-card p-8 rounded-2xl hover:scale-[1.02] transition-transform duration-300 border-l-4 border-l-primary">
-          <div class="flex flex-col md:flex-row justify-between md:items-center mb-4">
-            <div>
-              <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Data Analyst</h3>
-              <p class="text-lg text-primary font-semibold">Digital IT Hub</p>
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent py-6">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+                <span class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary">P</span>
+                Padi Praveen
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-text-secondary">
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#skills" class="hover:text-white transition-colors">Skills</a>
+                <a href="#experience" class="hover:text-white transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+                <a href="#contact" class="px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:text-white transition-all text-white">
+                    Let's Talk
+                </a>
             </div>
-            <div class="text-right mt-2 md:mt-0">
-              <span class="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-bold">May 2024 –
-                Present</span>
-              <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Visakhapatnam, India</p>
-            </div>
-          </div>
-          <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-200 text-lg">
-            <li>Perform data analysis and reporting to support key business decisions.</li>
-            <li>Build interactive dashboards and actionable insights for operational improvement.</li>
-          </ul>
         </div>
+    </nav>
 
-        <!-- Role 2 -->
-        <div
-          class="glass-card p-8 rounded-2xl hover:scale-[1.02] transition-transform duration-300 border-l-4 border-l-accent">
-          <div class="flex flex-col md:flex-row justify-between md:items-center mb-4">
-            <div>
-              <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Associate</h3>
-              <p class="text-lg text-accent font-semibold">ShowTime Consulting</p>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden justify-center fade-in">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[100px] -z-10"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-[100px] -z-10"></div>
+            
+            <div class="max-w-4xl mx-auto px-6 md:px-12 flex flex-col items-center text-center fade-up" style="transition-delay: 0.2s">
+                <div class="flex flex-col items-center gap-6">
+                    <div>
+                        <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4 border border-primary/20">
+                            Data Analyst | BI Specialist
+                        </span>
+                        <h1 class="text-5xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight">
+                            Turning data into <br/>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">actionable insights.</span>
+                        </h1>
+                        <p class="mt-6 text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
+                            I specialize in complex ETL pipelines, statistical modeling, and driving business decisions through intuitive, executive-level dashboards.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap items-center justify-center gap-4 mt-2">
+                        <a href="#projects" class="px-6 py-3 rounded-xl bg-primary text-white font-medium hover:bg-blue-600 transition-colors shadow-lg shadow-primary/25">
+                            View Projects
+                        </a>
+                        <a href="./resume.pdf" download="resume.pdf" target="_blank" class="px-6 py-3 rounded-xl bg-white/5 border border-white/10 text-white font-medium hover:bg-white/10 transition-colors">
+                            Download Resume
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-white/10 w-full max-w-2xl text-center fade-up" style="transition-delay: 0.4s">
+                        <div>
+                            <div class="text-3xl font-bold text-accent mb-1">+25%</div>
+                            <div class="text-sm text-text-secondary">Productivity Boost</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-accent mb-1">30%</div>
+                            <div class="text-sm text-text-secondary">Faster Delivery</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-accent mb-1">+20%</div>
+                            <div class="text-sm text-text-secondary">Client Retention</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="text-right mt-2 md:mt-0">
-              <span class="inline-block px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-bold">Feb 2024 –
-                May 2024</span>
-              <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Hyderabad, India</p>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 bg-card/30">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="flex flex-col items-center mb-16 fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">About Me</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="text-text-secondary text-lg leading-relaxed flex flex-col gap-6 font-light slide-right">
+                        <p>
+                            I am a results-driven <span class="text-white font-medium">Data Analyst</span> with over 2 years of professional experience translating complex datasets into strategic business decisions.
+                        </p>
+                        <p>
+                            My expertise spans the entire data lifecycle—from crafting robust ETL pipelines in Python and SQL to designing intuitive, high-impact dashboards in Power BI. I have a proven track record of reducing reporting times, boosting overall team productivity, and delivering actionable insights to stakeholders.
+                        </p>
+                        <p>
+                            As an <span class="text-white font-medium">IIT Goa</span> graduate, I combine rigorous analytical thinking with a passion for problem-solving, perfectly equipping me to tackle ambiguous open-ended business challenges.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors group cursor-pointer fade-up" style="transition-delay: 0.1s">
+                            <div class="bg-background rounded-full w-12 h-12 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg shadow-black/50 text-primary">
+                                <i data-lucide="book-open"></i>
+                            </div>
+                            <h3 class="text-white font-semibold mb-2">IIT Goa Graduate</h3>
+                            <p class="text-sm text-text-secondary">B.Tech with strong foundational knowledge.</p>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors group cursor-pointer fade-up" style="transition-delay: 0.2s">
+                            <div class="bg-background rounded-full w-12 h-12 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg shadow-black/50 text-accent">
+                                <i data-lucide="briefcase"></i>
+                            </div>
+                            <h3 class="text-white font-semibold mb-2">2+ Years Experience</h3>
+                            <p class="text-sm text-text-secondary">Corporate data analytics & BI roles.</p>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors group cursor-pointer fade-up" style="transition-delay: 0.3s">
+                            <div class="bg-background rounded-full w-12 h-12 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg shadow-black/50 text-primary">
+                                <i data-lucide="code-2"></i>
+                            </div>
+                            <h3 class="text-white font-semibold mb-2">Data Analyst</h3>
+                            <p class="text-sm text-text-secondary">Specialized in Python, SQL, & Visualizations.</p>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors group cursor-pointer fade-up" style="transition-delay: 0.4s">
+                            <div class="bg-background rounded-full w-12 h-12 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg shadow-black/50 text-accent">
+                                <i data-lucide="database"></i>
+                            </div>
+                            <h3 class="text-white font-semibold mb-2">ETL & BI Specialist</h3>
+                            <p class="text-sm text-text-secondary">Automating reporting & ensuring data quality.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-200 text-lg">
-            <li>Improved team productivity by <span class="font-bold text-accent">25%</span> through workflow analysis.
-            </li>
-            <li>Reduced project timelines by <span class="font-bold text-accent">30%</span> via strategic task
-              prioritization.</li>
-            <li>Increased client retention by <span class="font-bold text-accent">20%</span> using data-backed insights.
-            </li>
-          </ul>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-24">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="flex flex-col items-center mb-16 fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Core Competencies</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent rounded-full mb-6"></div>
+                    <p class="text-text-secondary text-center max-w-2xl">
+                        A comprehensive toolkit designed for end-to-end data analysis, modeling, and business intelligence.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-card border border-white/5 rounded-2xl p-6 hover:border-primary/30 transition-colors shadow-xl fade-up" style="transition-delay: 0.1s">
+                        <h3 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-accent"></span> Languages
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 bg-white/5 rounded-lg text-sm text-text-secondary hover:text-white hover:bg-primary/20 cursor-default">Python</span>
+                            <span class="px-3 py-1.5 bg-white/5 rounded-lg text-sm text-text-secondary hover:text-white hover:bg-primary/20 cursor-default">SQL</span>
+                            <span class="px-3 py-1.5 bg-white/5 rounded-lg text-sm text-text-secondary hover:text-white hover:bg-primary/20 cursor-default">JavaScript</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-card border border-white/5 rounded-2xl p-6 hover:border-primary/30 transition-colors shadow-xl fade-up" style="transition-delay: 0.2s">
+                        <h3 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-accent"></span> Data & BI
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 bg-white/5 rounded-lg text-sm text-text-secondary hover:text-white hover:bg-primary/20 cursor-default">Power BI</span>
+                            <span class="px-3 py-1.5 bg-white/5 rounded-lg text-sm text-text-secondary hover:text-white hover:bg-primary/20 cursor-default">Excel</span>
+                            <span class="px-3 py-1.5 bg-white/5 rounded-lg text-sm text-text-secondary hover:text-white hover:bg-primary/20 cursor-default">Data Vis</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-card border border-white/5 rounded-2xl p-6 hover:border-primary/30 transition-colors shadow-xl fade-up" style="transition-delay: 0.3s">
+                        <h3 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-accent"></span> Data Engineering
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 bg-white/5 rounded-lg text-sm text-text-secondary hover:text-white hover:bg-primary/20 cursor-default">ETL Pipelines</span>
+                            <span class="px-3 py-1.5 bg-white/5 rounded-lg text-sm text-text-secondary hover:text-white hover:bg-primary/20 cursor-default">Cleaning</span>
+                            <span class="px-3 py-1.5 bg-white/5 rounded-lg text-sm text-text-secondary hover:text-white hover:bg-primary/20 cursor-default">Pandas</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-card border border-white/5 rounded-2xl p-6 hover:border-primary/30 transition-colors shadow-xl fade-up" style="transition-delay: 0.4s">
+                        <h3 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-accent"></span> Tools
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 bg-white/5 rounded-lg text-sm text-text-secondary hover:text-white hover:bg-primary/20 cursor-default">Git</span>
+                            <span class="px-3 py-1.5 bg-white/5 rounded-lg text-sm text-text-secondary hover:text-white hover:bg-primary/20 cursor-default">Linux</span>
+                            <span class="px-3 py-1.5 bg-white/5 rounded-lg text-sm text-text-secondary hover:text-white hover:bg-primary/20 cursor-default">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-24 bg-card/10">
+            <div class="max-w-4xl mx-auto px-6 md:px-12">
+                <div class="flex flex-col items-center mb-16 fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Professional Experience</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent rounded-full mb-6"></div>
+                </div>
+
+                <div class="relative border-l border-white/10 ml-4 md:ml-0 space-y-12 pb-8">
+                    <!-- Exp 1 -->
+                    <div class="relative pl-8 md:pl-12 fade-up">
+                        <div class="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-1.5 shadow-[0_0_15px_rgba(59,130,246,0.6)] border-2 border-background"></div>
+                        <div class="bg-card border border-white/5 rounded-2xl p-6 md:p-8 shadow-xl hover:border-primary/20 transition-colors">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
+                                <div><h3 class="text-xl font-bold text-white">Data Analyst</h3><div class="text-primary font-medium">Digital IT Hub</div></div>
+                                <div class="text-sm font-medium px-3 py-1 bg-white/5 rounded-full text-text-secondary border border-white/5 w-fit">May 2024 – Present</div>
+                            </div>
+                            <p class="text-text-secondary mb-6">Spearheaded the design and implementation of an automated ETL pipeline, vastly improving the reliability of business intelligence reporting.</p>
+                            <div class="space-y-3">
+                                <div class="flex items-start gap-3 bg-accent/5 border border-accent/10 rounded-lg p-3">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div><span class="text-white font-medium">Built 3 dashboards tracking 15+ KPIs</span>
+                                </div>
+                                <div class="flex items-start gap-3 bg-accent/5 border border-accent/10 rounded-lg p-3">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div><span class="text-white font-medium">Automated ETL → reduced reporting time by 40%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Exp 2 -->
+                    <div class="relative pl-8 md:pl-12 fade-up" style="transition-delay: 0.1s">
+                        <div class="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-1.5 shadow-[0_0_15px_rgba(59,130,246,0.6)] border-2 border-background"></div>
+                        <div class="bg-card border border-white/5 rounded-2xl p-6 md:p-8 shadow-xl hover:border-primary/20 transition-colors">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
+                                <div><h3 class="text-xl font-bold text-white">Associate</h3><div class="text-primary font-medium">ShowTime Consulting</div></div>
+                                <div class="text-sm font-medium px-3 py-1 bg-white/5 rounded-full text-text-secondary border border-white/5 w-fit">Previous Role</div>
+                            </div>
+                            <p class="text-text-secondary mb-6">Delivered data-backed insights directly influencing executive strategy, significantly boosting operational efficiency and client satisfaction.</p>
+                            <div class="space-y-3">
+                                <div class="flex items-start gap-3 bg-accent/5 border border-accent/10 rounded-lg p-3">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div><span class="text-white font-medium">Productivity +25%</span>
+                                </div>
+                                <div class="flex items-start gap-3 bg-accent/5 border border-accent/10 rounded-lg p-3">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div><span class="text-white font-medium">Client retention +20%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Exp 3 -->
+                    <div class="relative pl-8 md:pl-12 fade-up" style="transition-delay: 0.2s">
+                        <div class="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-1.5 shadow-[0_0_15px_rgba(59,130,246,0.6)] border-2 border-background"></div>
+                        <div class="bg-card border border-white/5 rounded-2xl p-6 md:p-8 shadow-xl hover:border-primary/20 transition-colors">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
+                                <div><h3 class="text-xl font-bold text-white">Jr Data Analyst</h3><div class="text-primary font-medium">Digital IT Hub</div></div>
+                                <div class="text-sm font-medium px-3 py-1 bg-white/5 rounded-full text-text-secondary border border-white/5 w-fit">Early Career</div>
+                            </div>
+                            <p class="text-text-secondary mb-6">Developed foundational analytics pipelines and supported enterprise-level BI dashboards for stakeholders.</p>
+                            <div class="space-y-3">
+                                <div class="flex items-start gap-3 bg-white/5 border border-white/10 rounded-lg p-3">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0"></div><span class="text-white text-sm">Python & SQL analysis</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-24">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="flex flex-col items-center mb-16 fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Featured Work</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent rounded-full mb-6"></div>
+                    <p class="text-text-secondary text-center max-w-2xl">Real-world projects showcasing end-to-end data analysis, intelligent dashboard design, and actionable ML insights.</p>
+                </div>
+
+                <!-- Featured Project -->
+                <div class="bg-card rounded-2xl border border-white/10 shadow-2xl overflow-hidden mb-8 grid md:grid-cols-2 group hover:border-accent/30 transition-colors fade-up">
+                    <div class="p-8 md:p-12 flex flex-col justify-center">
+                        <div class="text-accent font-semibold text-sm tracking-wider mb-2 uppercase">Featured Data Analysis</div>
+                        <h3 class="text-3xl font-bold text-white mb-4">Heart Disease Risk Analysis</h3>
+                        <p class="text-text-secondary mb-6 leading-relaxed">A comprehensive statistical modeling project integrating complex ETL with EDA. Identified multi-variable cardiovascular risk factors allowing stakeholders to pinpoint preventative care strategies.</p>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="px-3 py-1 bg-accent/10 text-accent rounded border border-accent/20 text-xs font-medium">Python</span>
+                            <span class="px-3 py-1 bg-accent/10 text-accent rounded border border-accent/20 text-xs font-medium">Statistical Modeling</span>
+                            <span class="px-3 py-1 bg-accent/10 text-accent rounded border border-accent/20 text-xs font-medium">Power BI</span>
+                        </div>
+                    </div>
+                    <div class="bg-background/50 h-64 md:h-auto min-h-[300px] flex items-center p-6">
+                        <!-- Custom CSS Mock Dashboard Graphic -->
+                        <div class="w-full h-full border border-white/10 rounded-xl bg-card flex flex-col p-4 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-accent/20 blur-[50px] rounded-full"></div>
+                            <div class="flex justify-between items-center z-10">
+                                <h4 class="text-sm font-semibold text-white flex items-center gap-2">Risk Analysis</h4>
+                                <span class="text-xs text-text-secondary bg-white/5 px-2 py-1 rounded">N=4,210</span>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2 z-10 mt-3">
+                                <div class="bg-white/5 p-3 rounded-lg border border-white/5">
+                                    <div class="text-[10px] text-text-secondary mb-1">Avg Risk Score</div>
+                                    <div class="text-lg font-bold text-white">68.4</div>
+                                </div>
+                                <div class="bg-accent/10 p-3 rounded-lg border border-accent/20">
+                                    <div class="text-[10px] text-accent mb-1">High-Risk Patients</div>
+                                    <div class="text-lg font-bold text-accent">24.1%</div>
+                                </div>
+                            </div>
+                            <div class="flex-1 bg-white/5 rounded-lg border border-white/5 mt-2 p-3 flex flex-col justify-end gap-1 z-10 mock-bar-container">
+                                <div class="flex items-end justify-between h-16 mt-2">
+                                     <div style="--target-height: 20%" class="mock-bar w-full mx-0.5 bg-gradient-to-t from-accent/40 to-accent rounded-t-sm"></div>
+                                     <div style="--target-height: 35%" class="mock-bar w-full mx-0.5 bg-gradient-to-t from-accent/40 to-accent rounded-t-sm"></div>
+                                     <div style="--target-height: 60%" class="mock-bar w-full mx-0.5 bg-gradient-to-t from-accent/40 to-accent rounded-t-sm"></div>
+                                     <div style="--target-height: 80%" class="mock-bar w-full mx-0.5 bg-gradient-to-t from-accent/40 to-accent rounded-t-sm"></div>
+                                     <div style="--target-height: 40%" class="mock-bar w-full mx-0.5 bg-gradient-to-t from-accent/40 to-accent rounded-t-sm"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sub Projects Grid -->
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- PRJ 2 -->
+                    <div class="bg-card rounded-2xl border border-white/10 shadow-xl overflow-hidden flex flex-col group hover:border-primary/30 transition-colors fade-up" style="transition-delay: 0.1s">
+                        <div class="w-full h-48 bg-background p-4 border-b border-white/10 flex flex-col relative overflow-hidden">
+                            <div class="grid grid-cols-3 gap-2 mt-4 z-10">
+                                <div class="bg-white/5 p-2 rounded text-center border border-white/5"><div class="text-[9px] text-text-secondary">Avg Salary</div><div class="text-sm font-bold text-white">$92k</div></div>
+                                <div class="bg-white/5 p-2 rounded text-center border border-white/5"><div class="text-[9px] text-text-secondary">Median</div><div class="text-sm font-bold text-white">$85k</div></div>
+                                <div class="bg-white/5 p-2 rounded text-center border border-white/5"><div class="text-[9px] text-text-secondary">Pay Gap</div><div class="text-sm font-bold text-primary">2.1%</div></div>
+                            </div>
+                            <div class="flex items-center gap-2 mt-auto z-10">
+                                <div class="h-2 bg-primary rounded-full w-3/4"></div><div class="h-2 bg-text-secondary/30 rounded-full w-1/4"></div>
+                            </div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-1">
+                            <h3 class="text-xl font-bold text-white mb-3">Employee Compensation Analysis</h3>
+                            <p class="text-text-secondary text-sm mb-6 flex-1">Engineered an HR analytics dashboard to track salary insights, demographic pay gaps, and role-based compensation trends.</p>
+                        </div>
+                    </div>
+                    <!-- PRJ 3 -->
+                    <div class="bg-card rounded-2xl border border-white/10 shadow-xl overflow-hidden flex flex-col group hover:border-primary/30 transition-colors p-8 fade-up" style="transition-delay: 0.2s">
+                        <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary border border-primary/20">
+                            <i data-lucide="shield-alert"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">E-SIGN Web App</h3>
+                        <p class="text-text-secondary text-sm mb-6 flex-1">A robust full-stack PDF editing and e-signature application. Focused on secure, seamless document handling.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-2 py-1 bg-white/5 text-text-secondary rounded border border-white/10 text-[10px] uppercase">React.js</span>
+                            <span class="px-2 py-1 bg-white/5 text-text-secondary rounded border border-white/10 text-[10px] uppercase">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section class="py-24 bg-card/10 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 fade-up">Notable Achievements</h2>
+                    <div class="w-16 h-1 bg-gradient-to-r from-accent to-primary rounded-full mb-8 fade-up"></div>
+                    <div class="flex overflow-x-auto gap-4 pb-4 snap-x hide-scrollbar">
+                        <div class="min-w-[280px] bg-card border border-white/5 rounded-2xl p-6 snap-start shadow-lg flex flex-col gap-3 slide-right">
+                            <div class="w-10 h-10 bg-background rounded-full flex items-center justify-center text-accent"><i data-lucide="trophy" class="w-5 h-5"></i></div>
+                            <h3 class="font-bold text-white">AIR 423 (JEE Advanced)</h3>
+                            <p class="text-xs text-text-secondary">Ranked among top 0.1% students.</p>
+                        </div>
+                        <div class="min-w-[280px] bg-card border border-white/5 rounded-2xl p-6 snap-start shadow-lg flex flex-col gap-3 slide-right" style="transition-delay: 0.1s">
+                            <div class="w-10 h-10 bg-background rounded-full flex items-center justify-center text-primary"><i data-lucide="medal" class="w-5 h-5"></i></div>
+                            <h3 class="font-bold text-white">NTSE Qualified</h3>
+                            <p class="text-xs text-text-secondary">National Talent Search Examination scholar.</p>
+                        </div>
+                        <div class="min-w-[280px] bg-card border border-white/5 rounded-2xl p-6 snap-start shadow-lg flex flex-col gap-3 slide-right" style="transition-delay: 0.2s">
+                            <div class="w-10 h-10 bg-background rounded-full flex items-center justify-center text-accent"><i data-lucide="star" class="w-5 h-5"></i></div>
+                            <h3 class="font-bold text-white">KVPY Qualified</h3>
+                            <p class="text-xs text-text-secondary">Fellowship for exceptional aptitude in sciences.</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 fade-up">Leadership</h2>
+                    <div class="w-16 h-1 bg-gradient-to-r from-primary to-accent rounded-full mb-8 fade-up"></div>
+                    <div class="flex flex-col gap-4">
+                        <div class="bg-card/50 border border-white/5 rounded-xl p-4 flex items-center gap-4 hover:bg-card hover:border-white/10 transition-colors fade-up"><div class="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div><span class="text-text-secondary font-medium">Captain – IIT Goa Basketball Team</span></div>
+                        <div class="bg-card/50 border border-white/5 rounded-xl p-4 flex items-center gap-4 hover:bg-card hover:border-white/10 transition-colors fade-up" style="transition-delay: 0.1s"><div class="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div><span class="text-text-secondary font-medium">Student Mentor</span></div>
+                        <div class="bg-card/50 border border-white/5 rounded-xl p-4 flex items-center gap-4 hover:bg-card hover:border-white/10 transition-colors fade-up" style="transition-delay: 0.2s"><div class="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div><span class="text-text-secondary font-medium">Photography Club Core</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="py-24 border-t border-white/5 relative overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 max-w-2xl h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
+        <div class="max-w-4xl mx-auto px-6 md:px-12 text-center fade-up">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">Let's Build Something.</h2>
+            <p class="text-lg text-text-secondary mb-12 max-w-2xl mx-auto">I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+            <a href="mailto:padipraveen@example.com" class="inline-flex items-center gap-3 px-8 py-4 bg-primary text-white rounded-full font-semibold hover:bg-blue-600 transition-all shadow-[0_0_40px_rgba(59,130,246,0.4)]">
+                <i data-lucide="mail"></i> Say Hello
+            </a>
+            <div class="mt-24 flex flex-col items-center gap-6">
+                <div class="flex gap-6">
+                    <a href="#" class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-text-secondary hover:text-white hover:bg-white/10 hover:scale-110 transition-all"><i data-lucide="code-2" class="w-5 h-5"></i></a>
+                    <a href="#" class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-text-secondary hover:text-blue-500 hover:bg-white/10 hover:scale-110 transition-all"><i data-lucide="user" class="w-5 h-5"></i></a>
+                </div>
+                <p class="text-sm text-text-secondary/50">© 2026 Padi Praveen. Built with HTML, CSS & Tailwind.</p>
+            </div>
         </div>
+    </footer>
 
-        <!-- Role 3 -->
-        <div
-          class="glass-card p-8 rounded-2xl hover:scale-[1.02] transition-transform duration-300 border-l-4 border-l-secondary">
-          <div class="flex flex-col md:flex-row justify-between md:items-center mb-4">
-            <div>
-              <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Data Analyst</h3>
-              <p class="text-lg text-secondary font-semibold">Digital IT Hub</p>
-            </div>
-            <div class="text-right mt-2 md:mt-0">
-              <span class="inline-block px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm font-bold">Aug
-                2023 – Jan 2024</span>
-              <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Visakhapatnam, India</p>
-            </div>
-          </div>
-          <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-200 text-lg">
-            <li>Supported data analysis, reporting, and business intelligence initiatives.</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="py-24 section-fade">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-4xl font-bold mb-16 text-center text-slate-900 dark:text-white">Technical Arsenal</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-
-        <!-- Skill Card 1 -->
-        <div class="glass-card p-10 rounded-3xl hover:-translate-y-2 transition-transform duration-300 group">
-          <div
-            class="h-16 w-16 mx-auto bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
-              </path>
-            </svg>
-          </div>
-          <h3 class="text-2xl font-bold mb-6">Data & Analytics</h3>
-          <div class="flex flex-wrap justify-center gap-3">
-            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-full text-sm font-medium">Data
-              Analysis</span>
-            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-full text-sm font-medium">Business
-              Intelligence</span>
-            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-full text-sm font-medium">Statistics</span>
-            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-full text-sm font-medium">Automation</span>
-          </div>
-        </div>
-
-        <!-- Skill Card 2 -->
-        <div class="glass-card p-10 rounded-3xl hover:-translate-y-2 transition-transform duration-300 group">
-          <div
-            class="h-16 w-16 mx-auto bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-            </svg>
-          </div>
-          <h3 class="text-2xl font-bold mb-6">Tools & Tech</h3>
-          <div class="flex flex-wrap justify-center gap-3">
-            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-full text-sm font-medium">Python</span>
-            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-full text-sm font-medium">SQL</span>
-            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-full text-sm font-medium">Power BI</span>
-            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-full text-sm font-medium">Excel</span>
-          </div>
-        </div>
-
-        <!-- Skill Card 3 -->
-        <div class="glass-card p-10 rounded-3xl hover:-translate-y-2 transition-transform duration-300 group">
-          <div
-            class="h-16 w-16 mx-auto bg-pink-100 text-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path>
-            </svg>
-          </div>
-          <h3 class="text-2xl font-bold mb-6">Visualization</h3>
-          <div class="flex flex-wrap justify-center gap-3">
-            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-full text-sm font-medium">Dashboards</span>
-            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-full text-sm font-medium">Reports</span>
-            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-full text-sm font-medium">Business
-              Insights</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Education Section -->
-  <section id="education" class="py-24 section-fade">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-
-        <!-- Education -->
-        <div class="glass-card p-8 rounded-3xl">
-          <h2 class="text-3xl font-bold mb-8 text-primary">Education</h2>
-          <div class="space-y-8">
-            <div class="pb-6 border-b border-gray-200/30 last:border-0">
-              <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100">B.Tech – Computer Science & Engineering
-              </h3>
-              <p class="text-lg text-slate-600 dark:text-slate-300">Indian Institute of Technology (IIT) Goa</p>
-              <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">2019 – 2023</p>
-            </div>
-            <div>
-              <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100">Intermediate & High School</h3>
-              <p class="text-lg text-slate-600 dark:text-slate-300">Narayana Institute / Dr. KKR Gowtham</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Certs -->
-        <div class="glass-card p-8 rounded-3xl">
-          <h2 class="text-3xl font-bold mb-8 text-accent">Certifications & Lang</h2>
-          <ul class="space-y-6">
-            <li class="flex items-center space-x-4">
-              <span
-                class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-green-100 text-green-600">✓</span>
-              <span class="text-lg text-slate-700 dark:text-slate-200">Full Stack Web Developer</span>
-            </li>
-            <li class="flex items-center space-x-4">
-              <span
-                class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-green-100 text-green-600">✓</span>
-              <span class="text-lg text-slate-700 dark:text-slate-200">EF SET English Certificate – C2 Proficient
-                (94/100)</span>
-            </li>
-          </ul>
-          <div class="mt-8 pt-8 border-t border-gray-200/30">
-            <div class="flex justify-between items-center mb-2">
-              <span class="font-bold">English & Hindi</span>
-              <span class="text-sm bg-slate-200 dark:bg-slate-700 px-2 py-1 rounded">Professional</span>
-            </div>
-            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-              <div class="bg-gradient-to-r from-primary to-accent h-2.5 rounded-full" style="width: 100%"></div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="py-24">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center section-fade">
-      <h2 class="text-4xl font-bold mb-6 text-slate-900 dark:text-white">Let's Connect</h2>
-      <p class="text-xl text-slate-600 dark:text-slate-300 mb-12">
-        Open to opportunities in Data Analysis and Business Intelligence.
-      </p>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <a href="mailto:praveen.padi.19031@iitgoa.ac.in"
-          class="glass-card p-8 rounded-2xl hover:scale-105 transition-transform group">
-          <div
-            class="p-4 bg-primary/10 rounded-full text-primary w-16 h-16 mx-auto mb-4 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-              </path>
-            </svg>
-          </div>
-          <h3 class="font-bold text-xl mb-2">Email Me</h3>
-          <p class="text-sm text-slate-500 dark:text-slate-400 break-all">praveen.padi.19031@iitgoa.ac.in</p>
-        </a>
-
-        <a href="https://www.linkedin.com/in/praveen-padi-11b1031a0" target="_blank"
-          class="glass-card p-8 rounded-2xl hover:scale-105 transition-transform group">
-          <div
-            class="p-4 bg-blue-100 dark:bg-blue-900/30 rounded-full text-blue-600 w-16 h-16 mx-auto mb-4 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors">
-            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-            </svg>
-          </div>
-          <h3 class="font-bold text-xl mb-2">LinkedIn</h3>
-          <p class="text-sm text-slate-500 dark:text-slate-400">Connect Profile</p>
-        </a>
-      </div>
-
-      <div class="mt-12 text-slate-500 dark:text-slate-400">
-        <p>📍 Andhra Pradesh, India</p>
-        <p>📞 +91 7013228714</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="py-8 glass-card border-t border-white/10 text-center text-slate-500 dark:text-slate-400 text-sm mt-12">
-    <p>&copy; 2024 Praveen Padi. Designed with Glassmorphism.</p>
-  </footer>
-
-  <script src="main.js"></script>
+    <!-- Initialize Lucide Icons -->
+    <script>lucide.createIcons();</script>
+    <script src="script.js"></script>
 </body>
-
 </html>

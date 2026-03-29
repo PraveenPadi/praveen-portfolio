@@ -1,55 +1,71 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 body {
-    font-family: 'Outfit', sans-serif;
+  font-family: 'Inter', sans-serif;
+  background-color: #0B0F17;
+  color: #E5E7EB;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-/* Dynamic Gradient Background Animation - Vibrant Version */
-.gradient-bg {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0F17;
+}
+::-webkit-scrollbar-thumb {
+  background: #111827;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3B82F6;
 }
 
-.dark .gradient-bg {
-    background: linear-gradient(-45deg, #0f172a, #1e1b4b, #312e81, #0f172a);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+/* Base animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-up.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+.fade-in.in-view {
+  opacity: 1;
 }
 
-.glass-card {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+.slide-right {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.slide-right.in-view {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-.dark .glass-card {
-    background: rgba(15, 23, 42, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+/* Dashboards CSS */
+.mock-bar {
+  height: 0;
+  transition: height 1s ease-out;
+}
+.mock-bar.in-view {
+  height: var(--target-height, 100%);
 }
 
-.section-fade {
-    transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1), transform 0.8s cubic-bezier(0.5, 0, 0, 1);
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }
-
-.section-fade.visible {
-    opacity: 1;
-    transform: translateY(0);
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
